@@ -1,7 +1,7 @@
 import axios from "axios";
 import { authHeaders } from "./AuthService";
 
-const usersUrl = "http://localhost:5050/usuarios";
+const usersUrl = "http://localhost:3002/usuarios";
 
 
 export const createUser = async (user) => {
