@@ -1,9 +1,9 @@
-import react, { useState, useEffect } from 'react';
-import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, DesktopDatePicker, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, InputLabel, Input, Button, makeStyles, Typography, FormLabel} from '@material-ui/core';
 import { editSale, getSale } from '../../services/SalesService';
 import { getProducts } from '../../services/ProductService';
 import { useHistory, useParams } from 'react-router-dom';
-import { getCurrentUser, verifyToken } from '../../services/AuthService';
+import { getCurrentUser} from '../../services/AuthService';
 
 
 const initialValue = {
@@ -12,7 +12,8 @@ const initialValue = {
     valor: 0,
     nombreCliente: "",
     idCliente: "",
-    idVendedor: ""
+    idVendedor: "",
+    descripcion: ""
 }
 
 const initialValueProduct = {
@@ -73,13 +74,13 @@ export function EditSale() {
 
     const [creatingProductState, setCreatingProductState] = useState('minimizado');
 
-    const { productos, fecha, valor, nombreCliente, idCliente, idVendedor } = sale;
+    const { productos, fecha, valor, nombreCliente, idCliente, idVendedor} = sale;
 
     const loadSaleData = async () => {
         let response = await getSale(id);
-        response.data.data.productos.forEach(element => {
+        /*response.data.data.productos.forEach(element => {
             element.descripcion = products.find(item => item._id === element._id).descripcion
-        });
+        });*/
         setSale(response.data.data);
     }
 

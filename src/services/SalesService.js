@@ -13,7 +13,7 @@ export const getSales = async () => {
 }
 
 export const addSale = async (sale) => {
-    return await axios.post(`${salesUrl}/`, sale, { headers: authHeaders });
+    return await axios.post(`${salesUrl}/`, sale);
 }
 
 export const deleteSale = async (id) => {

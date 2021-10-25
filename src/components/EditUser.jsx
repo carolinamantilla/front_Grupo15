@@ -33,7 +33,8 @@ export function EditUser() {
 
     useEffect(() => {
         loadUsuarioData();
-    }, [])
+    }, []
+    )
 
     const loadUsuarioData = async () => {
         let response = await getUser(id);
