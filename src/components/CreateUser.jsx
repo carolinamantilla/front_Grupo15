@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { addUser } from '../services/UsersService';
 import { useHistory } from 'react-router-dom';
@@ -62,7 +62,7 @@ export function CreateUser() {
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Contraseña</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} type="password" name="password" value={password} id="my-input" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">sexo</InputLabel>
@@ -88,12 +88,12 @@ export function CreateUser() {
                 <FormLabel component="legend">Estado</FormLabel>
                 <RadioGroup
                     name='estado'
-                    onChange={(e) => onStateChange(e.target.value === "disponible")}
+                    onChange={(e) => onStateChange(e.target.value === "activo")}
                     aria-label="estado"
-                    defaultValue="Activo"
-                    value={estado ? "Activo" : "Inactivo"}>
-                    <FormControlLabel value="Activo" control={<Radio />} label="Activo" />
-                    <FormControlLabel value="Inactivo" control={<Radio />} label="Inactivo" />
+                    defaultValue="activo"
+                    value={estado ? "activo" : "inactivo"}>
+                    <FormControlLabel value="activo" control={<Radio />} label="Activo" />
+                    <FormControlLabel value="inactivo" control={<Radio />} label="Inactivo" />
                 </RadioGroup>
             </FormControl>
             <FormControl>

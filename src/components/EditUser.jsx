@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { editUser, getUser } from '../services/UsersService';
 import { useHistory, useParams } from 'react-router-dom';
@@ -66,15 +66,15 @@ export function EditUser() {
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Contraseña</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="password" value={password} id="my-input" shrink/>
+                <Input onChange={(e) => onValueChange(e)} type="password" name="password" value={password} id="my-input" shrink/>
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Sexo</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="sexo" value={sexo} id="my-input" shrink disabled/>
+                <Input onChange={(e) => onValueChange(e)} name="sexo" value={sexo} id="my-input" shrink/>
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Identificacion</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="identificacion" value={identificacion} id="my-input" shrink disabled/>
+                <Input onChange={(e) => onValueChange(e)} name="identificacion" value={identificacion} id="my-input" shrink/>
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">profesion</InputLabel>
@@ -92,7 +92,7 @@ export function EditUser() {
                 <FormLabel component="legend">Estado</FormLabel>
                 <RadioGroup
                     name='estado'
-                    onChange={(e) => onStateChange(e.target.value === "disponible")}
+                    onChange={(e) => onStateChange(e.target.value === "activo")}
                     aria-label="estado"
                     defaultValue="activo"
                     value={estado ? "activo" : "inactivo"}>
@@ -101,7 +101,7 @@ export function EditUser() {
                 </RadioGroup>
             </FormControl>
             <FormControl>
-                <Button variant="contained" onClick={() => updateUsuarioData()} color="primary">Editar Usuarioo</Button>
+                <Button variant="contained" onClick={() => updateUsuarioData()} color="primary">Editar usuario</Button>
             </FormControl>
         </FormGroup>
     )

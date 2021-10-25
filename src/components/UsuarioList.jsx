@@ -94,7 +94,7 @@ export function UsuariosList() {
                                 <TableCell>{usuario._id.substring(0,6)}</TableCell>
                                 <TableCell>{usuario.fullName}</TableCell>
                                 <TableCell>{usuario.email}</TableCell>
-                                <TableCell>{usuario.rol ? "activo" : "inactivo"}</TableCell>
+                                <TableCell>{usuario.estado ? "activo" : "inactivo"}</TableCell>
                                 {user
                                     &&
 
