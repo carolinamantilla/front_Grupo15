@@ -1,9 +1,9 @@
-import react, { useState, useEffect } from 'react';
-import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, DesktopDatePicker, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, InputLabel, Input, Button, makeStyles, Typography, FormLabel} from '@material-ui/core';
 import { addSale } from '../../services/SalesService';
 import { getProducts } from '../../services/ProductService';
 import { useHistory } from 'react-router-dom';
-import { getCurrentUser, verifyToken } from '../../services/AuthService';
+//import { getCurrentUser} from '../../services/AuthService';
 
 
 const initialValue = {
@@ -60,7 +60,7 @@ export function CreateSale() {
     const [user, setUser] = useState(null)
 
     useEffect(() => {
-        setUser(getCurrentUser());
+        //setUser(getCurrentUser());
         loadProductsData();
     }, [])
 
@@ -84,8 +84,6 @@ export function CreateSale() {
             setNewProduct(newProductCopy);
         }
         setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-
-
     }
 
     const loadProductsData = async () => {
@@ -103,6 +101,7 @@ export function CreateSale() {
 
     const addSaleData = async () => {
         let response = await addSale(sale);
+        console.log(sale);
         if (response.status === 201) {
             history.push('/ventas');
         }

@@ -1,9 +1,9 @@
-import react, { useState, useEffect } from 'react';
-import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, DesktopDatePicker, InputLabel, Input, Button, makeStyles, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { FormGroup, Select, MenuItem, Table, TableHead, TableCell, TableRow, TableBody, FormControl, InputLabel, Input, Button, makeStyles, Typography, FormLabel} from '@material-ui/core';
 import { editSale, getSale } from '../../services/SalesService';
 import { getProducts } from '../../services/ProductService';
 import { useHistory, useParams } from 'react-router-dom';
-import { getCurrentUser, verifyToken } from '../../services/AuthService';
+import { getCurrentUser} from '../../services/AuthService';
 
 
 const initialValue = {

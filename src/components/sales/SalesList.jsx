@@ -65,7 +65,7 @@ export function SalesList() {
                         <TableCell>Id Vendedor</TableCell>
                         {user && (
                             <TableCell className={classes.button_add}>
-                                <Button variant="contained" color="primary" component={Link} to="ventas/agregar" >✚ Nueva Venta</Button>
+                                <Button variant="contained" color="primary" component={Link} to="ventas/agregar" >Nueva Venta</Button>
                             </TableCell>
                         )}
                     </TableRow>
@@ -84,9 +84,9 @@ export function SalesList() {
                                     &&
 
                                     (<TableCell>
-                                        <Button className={classes.button} variant="contained" component={Link} to={`ventas/detalle/${sale._id}`} color="primary">🔍 Detalle</Button>
-                                        <Button className={classes.button} variant="contained" component={Link} to={`ventas/editar/${sale._id}`} color="info">📝 Editar</Button>
-                                        <Button variant="contained" color="secondary" onClick={() => deleteSaleData(sale._id)} >🗑 Eliminar</Button>
+                                        <Button className={classes.button} variant="contained" component={Link} to={`ventas/detalle/${sale._id}`} color="primary">Detalle</Button>
+                                        <Button className={classes.button} variant="contained" component={Link} to={`ventas/editar/${sale._id}`} color="info">Editar  </Button>
+                                        <Button className={classes.button} variant="contained" color="secondary" onClick={() => deleteSaleData(sale._id)} >Borrar</Button>
                                     </TableCell>)
                                 }
                             </TableRow>

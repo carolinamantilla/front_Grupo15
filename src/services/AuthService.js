@@ -1,7 +1,7 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-const authUrl = "http://localhost:3002/auth";
+const authUrl = "http://localhost:3003/auth";
 
 export const loginAuth = async (credentials) => {
     return await axios.post(`${authUrl}/login`, credentials);
