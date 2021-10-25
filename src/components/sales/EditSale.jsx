@@ -12,7 +12,8 @@ const initialValue = {
     valor: 0,
     nombreCliente: "",
     idCliente: "",
-    idVendedor: ""
+    idVendedor: "",
+    descripcion: ""
 }
 
 const initialValueProduct = {
@@ -73,13 +74,13 @@ export function EditSale() {
 
     const [creatingProductState, setCreatingProductState] = useState('minimizado');
 
-    const { productos, fecha, valor, nombreCliente, idCliente, idVendedor } = sale;
+    const { productos, fecha, valor, nombreCliente, idCliente, idVendedor} = sale;
 
     const loadSaleData = async () => {
         let response = await getSale(id);
-        response.data.data.productos.forEach(element => {
+        /*response.data.data.productos.forEach(element => {
             element.descripcion = products.find(item => item._id === element._id).descripcion
-        });
+        });*/
         setSale(response.data.data);
     }
 

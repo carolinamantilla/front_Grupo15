@@ -88,12 +88,12 @@ export function CreateUser() {
                 <FormLabel component="legend">Estado</FormLabel>
                 <RadioGroup
                     name='estado'
-                    onChange={(e) => onStateChange(e.target.value === "disponible")}
+                    onChange={(e) => onStateChange(e.target.value === "activo")}
                     aria-label="estado"
-                    defaultValue="Activo"
-                    value={estado ? "Activo" : "Inactivo"}>
-                    <FormControlLabel value="Activo" control={<Radio />} label="Activo" />
-                    <FormControlLabel value="Inactivo" control={<Radio />} label="Inactivo" />
+                    defaultValue="activo"
+                    value={estado ? "activo" : "inactivo"}>
+                    <FormControlLabel value="activo" control={<Radio />} label="Activo" />
+                    <FormControlLabel value="inactivo" control={<Radio />} label="Inactivo" />
                 </RadioGroup>
             </FormControl>
             <FormControl>

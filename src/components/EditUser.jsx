@@ -33,7 +33,8 @@ export function EditUser() {
 
     useEffect(() => {
         loadUsuarioData();
-    }, [])
+    }, []
+    )
 
     const loadUsuarioData = async () => {
         let response = await getUser(id);
@@ -92,7 +93,7 @@ export function EditUser() {
                 <FormLabel component="legend">Estado</FormLabel>
                 <RadioGroup
                     name='estado'
-                    onChange={(e) => onStateChange(e.target.value === "disponible")}
+                    onChange={(e) => onStateChange(e.target.value === "activo")}
                     aria-label="estado"
                     defaultValue="activo"
                     value={estado ? "activo" : "inactivo"}>
