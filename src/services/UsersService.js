@@ -1,7 +1,7 @@
 import axios from "axios";
 import { authHeaders } from "./AuthService";
 
-const usersUrl = "http://localhost:3003/usuarios";
+const usersUrl = " https://app-grupo15min.herokuapp.com/usuarios";
 
 
 export const createUser = async (user) => {
