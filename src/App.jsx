@@ -15,6 +15,9 @@ import { Signup } from "./components/Signup";
 import { Home } from "./components/Home";
 import { NotFound } from './components/NotFound';
 import { NavBar } from './components/NavBar';
+import { UsuariosList } from './components/UsuarioList';
+import { CreateUser } from './components/CreateUser';
+import { EditUser } from './components/EditUser'; 
 
 import { getCurrentUser } from './services/AuthService';
 //import { verifyToken } from './services/AuthService';
@@ -37,18 +40,22 @@ export function App() {
                 <Route exact path="/productos" component={ProductList} />
                 <Route exact path="/ventas" component={SalesList} />
                 <Route exact path="/ventas/detalle/:id" component={SaleDetail} />
+                <Route exact path="/usuario" component={UsuariosList} />
                 {user && (
                     <>
                         <Route exact path="/productos/agregar" component={CreateProduct} />
                         <Route exact path="/productos/editar/:id" component={EditProduct} />
                         <Route exact path="/ventas/agregar" component={CreateSale} />
                         <Route exact path="/ventas/editar/:id" component={EditSale} />
+                        <Route exact path="/usuario/agregar" component={CreateUser} />
+                        <Route exact path="/usuario/editar/:id" component={EditUser} />
                     </>
                 )}
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/registrarse" component={Signup} />
+                <Route exact path="/registrarse" component={Signup} />                                                                                                                                                                          
                 <Route component={NotFound} />
             </Switch>
         </BrowserRouter>
     )
 }
+export default App

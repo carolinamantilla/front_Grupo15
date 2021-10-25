@@ -48,7 +48,7 @@ export function NavBar() {
         <>
         <Box sx={{ display: 'flex', p: 1 }}>
             <AppBar position="static" className={classes.header}>
-                <center>
+               
                 <Toolbar>
                         <a href="#">
                             <div className="logo">
@@ -94,7 +94,9 @@ export function NavBar() {
                         </>
                     )}
                 </Toolbar>
+               
             </AppBar>
         </Box>
+        </>
     )
 }

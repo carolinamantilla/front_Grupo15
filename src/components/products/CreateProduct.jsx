@@ -10,7 +10,7 @@ import { FormGroup,
     FormLabel, 
     FormControlLabel, 
     Radio } from '@material-ui/core';
-import { addProduct } from '../services/ProductService';
+import { addProduct } from '../../services/ProductService';
 import { useHistory } from 'react-router-dom';
 
 const initialValue = {

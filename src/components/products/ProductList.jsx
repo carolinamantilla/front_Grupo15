@@ -5,7 +5,7 @@ import { Table, TableHead,
     TableBody, 
     Button, 
     makeStyles } from '@material-ui/core';
-import { getProducts, deleteProduct } from '../services/ProductService';
+import { getProducts, deleteProduct } from '../../services/ProductService';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
