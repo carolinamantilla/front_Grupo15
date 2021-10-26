@@ -1,7 +1,7 @@
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
-const authUrl = " https://app-grupo15min.herokuapp.com/auth";
+const authUrl = "https://dry-gorge-74354.herokuapp.com/auth";
 
 export const loginAuth = async (credentials) => {
     return await axios.post(`${authUrl}/login`, credentials);

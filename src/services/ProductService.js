@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const productsUrl = " https://app-grupo15min.herokuapp.com/productos"; 
+const productsUrl = "https://dry-gorge-74354.herokuapp.com/productos"; 
 
 export const getProduct = async (id) => {
     return await axios.get(`${productsUrl}/${id}`);
